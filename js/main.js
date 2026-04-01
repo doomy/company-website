@@ -16,15 +16,27 @@ function initNavigation() {
 
   if (!toggle || !links) return;
 
+  // Ensure the menu has an id so it can be referenced by aria-controls
+  const menuId = links.id || "nav-links";
+  if (!links.id) {
+    links.id = menuId;
+  }
+
+  // Initialize ARIA attributes for accessibility
+  toggle.setAttribute("aria-controls", menuId);
+  toggle.setAttribute("aria-expanded", "false");
+
   toggle.addEventListener("click", () => {
-    toggle.classList.toggle("active");
-    links.classList.toggle("open");
+    const isOpen = links.classList.toggle("open");
+    toggle.classList.toggle("active", isOpen);
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
   links.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       toggle.classList.remove("active");
       links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
     });
   });
 }
