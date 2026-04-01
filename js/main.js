@@ -34,6 +34,10 @@ function initScrollReveal() {
 
   if (!elements.length) return;
 
+  if (!("IntersectionObserver" in window)) {
+    elements.forEach((el) => el.classList.add("revealed"));
+    return;
+  }
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
