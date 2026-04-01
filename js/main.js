@@ -9,6 +9,7 @@ function initNavigation() {
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
 
+  if (!nav) return;
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 10);
   });
