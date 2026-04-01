@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Google Fonts should be loaded via HTML <link rel="preconnect"> and <link rel="stylesheet"> tags, not via CSS @import. */
 
 :root {
   --color-primary: #4F46E5;
