@@ -16,16 +16,6 @@ function initNavigation() {
 
   if (!toggle || !links) return;
 
-  // Ensure the menu has an id so it can be referenced by aria-controls
-  const menuId = links.id || "nav-links";
-  if (!links.id) {
-    links.id = menuId;
-  }
-
-  // Initialize ARIA attributes for accessibility
-  toggle.setAttribute("aria-controls", menuId);
-  toggle.setAttribute("aria-expanded", "false");
-
   toggle.addEventListener("click", () => {
     const isOpen = links.classList.toggle("open");
     toggle.classList.toggle("active", isOpen);
