@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio &mdash; Tenvold</title>
+  <meta name="description" content="Explore our work. A selection of projects across strategy, cloud, design, and data.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo">Tenvold</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>Our Work</h1>
+      <p>A selection of projects that showcase how we help businesses solve real problems with technology.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="strategy">Digital Strategy</button>
+        <button class="filter-btn" data-filter="cloud">Cloud Solutions</button>
+        <button class="filter-btn" data-filter="design">Product Design</button>
+        <button class="filter-btn" data-filter="data">Data &amp; Analytics</button>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card reveal reveal-delay-1" data-category="data">
+          <div class="portfolio-card-image">
+            <img src="img/portfolio-1.jpg" alt="CloudSync Dashboard project" width="600" height="400">
+            <div class="portfolio-card-overlay">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-category">Data &amp; Analytics</div>
+            <h3>Meridian Analytics Platform</h3>
+            <p>Real-time analytics dashboard for a logistics company, consolidating data from 12 warehouses into a single decision-making hub.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-delay-2" data-category="strategy">
+          <div class="portfolio-card-image">
+            <img src="img/portfolio-2.jpg" alt="Apex Financial Portal project" width="600" height="427">
+            <div class="portfolio-card-overlay">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-category">Digital Strategy</div>
+            <h3>Apex Financial Portal</h3>
+            <p>End-to-end digital transformation for a mid-size financial services firm, from legacy audit to a modern client-facing platform.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-delay-3" data-category="design">
+          <div class="portfolio-card-image">
+            <img src="img/portfolio-3.jpg" alt="UrbanFlow Mobile App project" width="600" height="400">
+            <div class="portfolio-card-overlay">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-category">Product Design</div>
+            <h3>UrbanFlow Mobile App</h3>
+            <p>A cross-platform transit app designed for daily commuters, featuring live updates, route planning, and accessibility-first design.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-delay-4" data-category="cloud">
+          <div class="portfolio-card-image">
+            <img src="img/portfolio-4.jpg" alt="Greenline Logistics System project" width="600" height="400">
+            <div class="portfolio-card-overlay">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-category">Cloud Solutions</div>
+            <h3>Greenline Cloud Migration</h3>
+            <p>Migrated a national logistics provider from on-premise infrastructure to a multi-region AWS setup, reducing downtime by 94%.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-delay-1" data-category="cloud">
+          <div class="portfolio-card-image">
+            <img src="img/portfolio-5.jpg" alt="Vantage Supply Chain project" width="600" height="400">
+            <div class="portfolio-card-overlay">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-category">Cloud Solutions</div>
+            <h3>Vantage Supply Chain</h3>
+            <p>Serverless inventory management system built on GCP, handling 50K+ daily transactions for a retail chain with zero cold starts.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-delay-2" data-category="design">
+          <div class="portfolio-card-image">
+            <img src="img/portfolio-6.jpg" alt="Pulse Health Tracker project" width="600" height="400">
+            <div class="portfolio-card-overlay">
+              <span>View Project</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-category">Product Design</div>
+            <h3>Pulse Health Tracker</h3>
+            <p>Patient-facing wellness dashboard for a telehealth startup, integrating wearable data with physician-reviewed health insights.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">Tenvold</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Tenvold. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

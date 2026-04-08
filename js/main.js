@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavigation();
   initScrollReveal();
   initContactForm();
+  initPortfolioFilters();
 });
 
 function initNavigation() {
@@ -53,6 +54,27 @@ function initScrollReveal() {
   );
 
   elements.forEach((el) => observer.observe(el));
+}
+
+function initPortfolioFilters() {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".portfolio-card");
+
+  if (!buttons.length || !cards.length) return;
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.getAttribute("data-filter");
+
+      cards.forEach((card) => {
+        const match = filter === "all" || card.getAttribute("data-category") === filter;
+        card.classList.toggle("hidden", !match);
+      });
+    });
+  });
 }
 
 function initContactForm() {
